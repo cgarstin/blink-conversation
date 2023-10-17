@@ -1,0 +1,6 @@
+:host {
+    border: 1px solid var(--text-primary);
+    border-radius: var(--border-radius);
+    appearance: none;
+    padding: calc(var(--spacing) / 2);
+}

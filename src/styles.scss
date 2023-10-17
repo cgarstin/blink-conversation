@@ -1,1 +1,62 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: 'Avenir Next';
+    font-style: normal;
+    font-weight: 300;
+    src: url('./assets/AvenirNextLTPro-Regular.woff') format('woff2');
+}
+
+@font-face {
+    font-family: 'Qanelas';
+    font-style: normal;
+    font-weight: 300;
+    src: url('./assets/QanelasRegular.woff') format('woff2');
+}
+
+:root {
+
+    /* Base colours */
+    --dark-green: #03390f;
+    --medium-ui: #c2cdc4;
+    --white: white;
+    --pale-green: #cfff71;
+    --dark-ui: #869b89;
+    --light-ui: #e1e6e1;
+    --pale-lime: #f5ffdf;
+    --bright-lime: #e2fea1;
+    --medium-lime: #ebfebf;
+
+    /* Utility colours */
+    --background: var(--pale-lime);
+    --text: var(--dark-green);
+
+    /* Utilities */
+    --spacing: 16px;
+    --box-shadow: 0 2px 5px rgba(0,0,0,.2);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Qanelas', sans-serif;
+}
+
+body {
+    height: 100vh;
+}
+
+ul {
+    padding: 0;
+}
+
+
+p {
+    margin: 0;
+
+    &, li {
+        font-family: 'Avenir Next', sans-serif;
+    }
+}

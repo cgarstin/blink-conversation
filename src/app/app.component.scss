@@ -1,0 +1,87 @@
+:host {
+    display: grid;
+    grid-template-areas: "sidebar conversations"
+                         "sidebar composer";
+    height: 100%;
+    grid-template-rows: 1fr auto;
+    grid-template-columns: auto 1fr;
+    background-color: var(--background);
+    color: var(--text);
+    padding: calc(var(--spacing) * 1.5) 0 calc(var(--spacing) * 1.5) calc(var(--spacing) * 1.5);
+    grid-gap: calc(var(--spacing) * 1.5);
+}
+
+.conversations {
+    grid-area: sidebar;
+
+    ul {
+        display: grid;
+        background-color: var(--white);
+        padding: var(--spacing);
+        border-radius: 4px;
+        box-shadow: var(--box-shadow);
+        border-color: var(--light-ui);
+    }
+
+    li {
+        cursor: pointer;
+        border-radius: 4px;
+        padding: calc(var(--spacing) / 2);
+
+        &:hover {
+            background-color: var(--light-ui);
+        }
+
+        &.is-selected {
+            background-color: var(--bright-lime);
+        }
+    }
+}
+
+.error-message {
+    display: grid;
+    gap: var(--spacing);
+    background-color: var(--dark-green);
+    color: var(--white);
+    padding: calc(var(--spacing) * 1.5);
+    border-radius: var(--spacing);
+
+    [blinkButton] {
+        margin-top: var(--spacing);
+        justify-self: end;
+    }
+}
+
+.messages {
+    grid-area: conversations;
+    padding-right: calc(var(--spacing) * 1.5);
+    overflow-y: auto;
+
+    ul {
+        display: grid;
+        grid-row-gap: var(--spacing);
+    }
+
+    li {
+        scroll-margin-block-end: var(--spacing);
+    }
+}
+
+.composer {
+}
+
+li {
+    list-style-type: none;
+}
+
+form {
+    grid-gap: var(--spacing);
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-area: composer;
+    padding: calc(var(--spacing) * 1.5);
+    background-color: var(--dark-green);
+    width: fit-content;
+    border-radius: var(--spacing);
+    margin-bottom: var(--spacing);
+}
