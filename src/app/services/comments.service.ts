@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
     providedIn: 'root'
 })
 export class CommentsService {
-    private readonly commentsUrl: string = '/assets/comments.json';
+    private readonly commentsUrl: string = '/blink-conversation//assets/comments.json';
     private conversations: WritableSignal<Array<ConversationModel>> = signal([]);
 
     constructor(
