@@ -9,7 +9,7 @@ export class OrderByDatePipe implements PipeTransform {
         if (!Array.isArray(currentArray)) {
             return undefined;
         }
-        
+
         return currentArray.sort((a, b) => {
             if (reverse) {
                 return new Date(a[dateKey]).getTime() - new Date(b[dateKey]).getTime();
